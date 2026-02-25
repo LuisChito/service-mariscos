@@ -10,7 +10,7 @@ Este es un proyecto desarrollado para la materia de **Programación Web**. En es
 A continuación se detallan los endpoints que se utilizan para interactuar con el servicio:
 
 ### Mariscos
-- `GET /mariscos` - Obtener lista de mariscos
+- `GET /mariscos` - Obtener lista de mariscos *(Ejemplo, no implementado aun)*
 
 ## Autor
 
