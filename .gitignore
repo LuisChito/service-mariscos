@@ -16,7 +16,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Environment files
+# Environment and files
+.gitignore
 .env
 .env.*
 !.env.example
@@ -26,3 +27,4 @@ pnpm-debug.log*
 Thumbs.db
 .vscode/
 uploads/
+src/infrastructure/db/seeders/20260225054046-demo-usuarios.js
