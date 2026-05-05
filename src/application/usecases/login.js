@@ -23,7 +23,5 @@ async function iniciarSesion(usuario, password) {
 	return resultado[0];
 }
 
-module.exports = {
-	iniciarSesion,
-};
+module.exports = iniciarSesion
 

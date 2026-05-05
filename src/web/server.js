@@ -5,12 +5,12 @@ const cors = require('cors');
 require('dotenv').config();
 
 const { sequelize } = require('../infrastructure/db/connection');
-const { iniciarSesion } = require('../application/usecases/login');
 
 const app = express();
 const port = process.env.APP_PORT || 3001;
 
 const sucursalesRoutes = require('./express/routes/sucursales');
+const loginRoutes = require('./express/routes/login');
 
 app.use(
   cors({
@@ -23,6 +23,7 @@ app.use(
 app.use(express.json());
 
 sucursalesRoutes(app);
+loginRoutes(app);
 
 async function start() {
 	try {
