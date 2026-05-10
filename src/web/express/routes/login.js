@@ -1,4 +1,4 @@
-const iniciarSesion = require ("../../../application/usecases/login.js")
+const iniciarSesion = require ("../../../application/usecases/auth/login")
 
 const routes = (app) => {
     app.post('/loginAuth', async (req, res) => {

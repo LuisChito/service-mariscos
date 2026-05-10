@@ -1,7 +1,7 @@
 'use strict';
 
 const { QueryTypes } = require('sequelize');
-const { sequelize } = require('../../infrastructure/db/connection');
+const { sequelize } = require('../../../infrastructure/db/connection');
 
 async function iniciarSesion(usuario, password) {
 	if (!usuario || !password) {
