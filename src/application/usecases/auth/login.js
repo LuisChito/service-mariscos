@@ -15,11 +15,9 @@ async function iniciarSesion(usuario, password) {
 			type: QueryTypes.SELECT,
 		}
 	);
-
 	if (!resultado || resultado.length === 0) {
 		return null;
 	}
-
 	return resultado[0];
 }
 
