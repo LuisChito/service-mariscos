@@ -52,6 +52,17 @@ A continuación se detallan los endpoints que se utilizan para interactuar con e
 }
 ```
 
+### `GET /dashboard/` — Obtiene la informacion del dashboard.
+
+**Respuesta**
+
+```json
+{
+    "sucActivas": 4,
+    "sucTotales": 5
+}
+```
+
 
 
 ## Autor
