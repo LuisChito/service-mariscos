@@ -12,6 +12,7 @@ const port = process.env.APP_PORT || 3001;
 const sucursalesRoutes = require('./express/routes/sucursales');
 const loginRoutes = require('./express/routes/login');
 const dashboardRoutes = require('./express/routes/dashboard');
+const platosRoutes =  require('./express/routes/platos');
 
 app.use(
   cors({
@@ -26,6 +27,7 @@ app.use(express.json());
 sucursalesRoutes(app);
 loginRoutes(app);
 dashboardRoutes(app);
+platosRoutes(app);
 
 async function start() {
 	try {
