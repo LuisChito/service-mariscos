@@ -13,7 +13,7 @@ A continuación se detallan los endpoints que se utilizan para interactuar con e
 
 ### Sucursales
 
-### `GET /sucursales` — Obtener la lista de sucursales.
+### `GET /sucursales` — Obtener la lista de sucursales activas.
 
 #### Ejemplo de respuesta
 
@@ -51,6 +51,21 @@ A continuación se detallan los endpoints que se utilizan para interactuar con e
     "status": false
 }
 ```
+### `GET /todasSuc` — Obtener lista de todas las sucursales.
+
+#### Ejemplo de respuesta
+
+```json
+[
+    {
+        "nombre": "Tijuana",
+        "imagen": "/imgs/layout/sucursales/bolivia.webp",
+        "direccion": "Insurgentes, Tijuana Baja California",
+        "status": false
+    }
+]
+```
+
 
 ### `GET /dashboard/` — Obtiene la informacion del dashboard.
 
