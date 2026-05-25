@@ -1,6 +1,8 @@
 'use strict'
 
+const { where } = require('sequelize');
 const { Sucursales } = require('../../../infrastructure/db/models');
+const { Contacto } = require('../../../infrastructure/db/models');
 
 async function getDashboard() {
     try {
@@ -10,10 +12,24 @@ async function getDashboard() {
             }
         });
         const sucTotales = await Sucursales.count();
-
-
+        const contComida = await Contacto.count({
+            where:{
+                motivo: 'Comida'
+            }
+        });
+        const contServicio = await Contacto.count({
+            where:{
+                motivo: 'Servicio'
+            }
+        });
+        const contVentas = await Contacto.count({
+            where:{
+                motivo: 'Vententas'
+            }
+        });
+        
         return {
-            sucActivas, sucTotales
+            sucActivas, sucTotales, contComida, contServicio, contVentas
         };
         
     } catch (error) {
