@@ -24,7 +24,7 @@ async function getDashboard() {
         });
         const contVentas = await Contacto.count({
             where:{
-                motivo: 'Vententas'
+                motivo: 'Ventas'
             }
         });
         
