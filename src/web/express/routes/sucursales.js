@@ -5,6 +5,7 @@ const getSucursales = require("../../../application/usecases/sucursales/getSucur
 const putStatus = require("../../../application/usecases/sucursales/putStatus");
 const getTodasSuc = require("../../../application/usecases/sucursales/getTodasSuc");
 const createSucursal = require("../../../application/usecases/sucursales/createSucursal");
+const deleteSucursales = require("../../../application/usecases/sucursales/deleteSucursales");
 
 const uploadDir = path.resolve(__dirname, '../../../../../client-mariscos/public/imgs/layout/sucursales');
 
@@ -55,6 +56,16 @@ const routes = (app) => {
         } catch (error) {
             console.error('Error al actualizar el estado de la sucursal:', error);
             res.status(500).json({ message: 'Error interno del servidor' });
+        }
+    });
+    app.delete('/sucursales/:nombre', async (req, res) => {
+        try {
+            const { nombre } = req.params;
+            const result = await deleteSucursales(nombre);
+            res.json(result);
+        } catch (error) {
+            console.error('Error al eliminar la sucursal:', error);
+            res.status(error.status || 500).json({ message: error.message || 'Error interno del servidor' });
         }
     });
     app.get('/todasSuc', async (_req, res) => {
