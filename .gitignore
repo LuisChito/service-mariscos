@@ -8,6 +8,7 @@ coverage/
 .turbo/
 .next/
 .vite/
+*.webp
 
 # Logs and reports
 *.log
