@@ -13,6 +13,7 @@ const sucursalesRoutes = require('./express/routes/sucursales');
 const loginRoutes = require('./express/routes/login');
 const dashboardRoutes = require('./express/routes/dashboard');
 const platosRoutes =  require('./express/routes/platos');
+const contactoRoutes = require('./express/routes/contacto');
 
 app.use(
   cors({
@@ -28,6 +29,7 @@ sucursalesRoutes(app);
 loginRoutes(app);
 dashboardRoutes(app);
 platosRoutes(app);
+contactoRoutes(app);
 
 async function start() {
 	try {

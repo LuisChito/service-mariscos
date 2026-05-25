@@ -26,15 +26,16 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.TEXT,
 			allowNull: false
 		},
-		createdo: {
+		creado: {
 			type: DataTypes.DATE,
 			allowNull: false,
 			defaultValue: DataTypes.NOW
 		}
 	}, {
 		sequelize,
-		modelName: 'contacto',
-		tableName: 'contacto'
+		modelName: 'Contacto',
+		tableName: 'Contacto',
+		timestamps: false
 	});
 
 	return Contacto;
